@@ -347,13 +347,6 @@ header.scrolled{
 .agenda-row.open .ag-icon{ transform:rotate(45deg); }
 .agenda-row.open .ag-topic{ color:var(--accent); }
 
-/* ── Cursor ── */
-.cursor-dot{
-  position:fixed; top:0; left:0; width:8px; height:8px; border-radius:99px;
-  background:var(--accent); pointer-events:none; mix-blend-mode:difference;
-  z-index:80; transition: transform .2s cubic-bezier(.7,0,.2,1), width .3s, height .3s;
-  transform: translate(-50%,-50%);
-}
 
 /* ── Misc utilities ── */
 .kinetic-char{ display:inline-block; will-change:transform; }
@@ -516,8 +509,7 @@ header.scrolled{
     box-sizing: border-box;
   }
 
-  /* Hide custom cursor on touch devices */
-  .cursor-dot{ display: none; }
+
 }
 
 /* ── Prefers-reduced-motion ── */

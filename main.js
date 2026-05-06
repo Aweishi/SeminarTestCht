@@ -136,25 +136,6 @@ ScrollTrigger.create({
   }
 });
 
-/* =============================================================
-   CURSOR
-   ============================================================= */
-(function cursor(){
-  if (!window.matchMedia('(pointer: fine)').matches) return;
-  const c = document.getElementById('cursor');
-  let tx = 0, ty = 0, cx = 0, cy = 0, rafId;
-  window.addEventListener('mousemove', (e)=>{ tx = e.clientX; ty = e.clientY; });
-  function raf(){
-    cx += (tx - cx) * 0.2; cy += (ty - cy) * 0.2;
-    c.style.transform = `translate(${cx}px, ${cy}px)`;
-    rafId = requestAnimationFrame(raf);
-  }
-  raf();
-  document.querySelectorAll('a, button, .agenda-row, .sp-card').forEach(el => {
-    el.addEventListener('mouseenter', ()=>{ c.style.width='28px'; c.style.height='28px'; });
-    el.addEventListener('mouseleave', ()=>{ c.style.width='8px'; c.style.height='8px'; });
-  });
-})();
 
 /* =============================================================
    ACCORDION
