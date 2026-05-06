@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+
+    <style>
+        .parallax-demo-wrap {
+            grid-column-gap: 15em;
+            grid-row-gap: 15em;
+            flex-flow: column;
+            width: 100%;
+            padding-bottom: 50vh;
+            font-size: min(.85vw, 1rem);
+            display: flex;
+        }
+
+        .parallax-demo-hero {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            padding-left: 2em;
+            padding-right: 2em;
+            display: flex;
+            position: relative;
+            overflow: clip;
+        }
+
+        .parallax-demo-bg {
+            z-index: 0;
+            width: 100%;
+            height: 120%;
+            position: absolute;
+        }
+
+        .parallax-demo-img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .parallax-demo-h {
+            z-index: 1;
+            text-align: center;
+            max-width: 15ch;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 4em;
+            font-weight: 500;
+            line-height: 1;
+            position: relative;
+        }
+
+        .parallax-demo-row {
+            grid-column-gap: 1.25em;
+            grid-row-gap: 1.25em;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-left: 2em;
+            padding-right: 2em;
+            display: flex;
+            position: relative;
+        }
+
+        .parallax-demo-row__third {
+            aspect-ratio: 1;
+            width: calc(33.3333% - .833333em);
+        }
+
+        .parallax-demo-card {
+            grid-column-gap: 2rem;
+            grid-row-gap: 2rem;
+            background-color: #ffffff0d;
+            border: 1px solid #fff3;
+            border-radius: .75em;
+            flex-flow: row;
+            justify-content: flex-start;
+            align-items: flex-end;
+            width: 100%;
+            height: 100%;
+            padding: 2em;
+            display: flex;
+        }
+
+        .parallax-demo-p {
+            margin-bottom: 0;
+            font-family: RM Mono, Arial, sans-serif;
+            font-size: 1.25em;
+        }
+
+        .parallax-demo-row__half {
+            aspect-ratio: 1;
+            border-radius: .75em;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .parallax-demo-card__wrap {
+            grid-column-gap: 2rem;
+            grid-row-gap: 2rem;
+            background-color: #ffffff0d;
+            border: 1px solid #fff3;
+            border-radius: .75em;
+            flex-flow: row;
+            justify-content: flex-start;
+            align-items: flex-end;
+            width: 100%;
+            height: 35em;
+            padding: 2em;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .parallax-demo-details {
+            z-index: 1;
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+        }
+
+        .data-parallax-span {
+            display: inline-block;
+        }
+
+        @media screen and (max-width: 767px) {
+            .parallax-demo-wrap {
+                font-size: 1rem;
+            }
+
+            .parallax-demo-h {
+                font-size: 3em;
+            }
+
+            .parallax-demo-row {
+                flex-flow: wrap;
+                padding-left: 1.25em;
+                padding-right: 1.25em;
+            }
+
+            .parallax-demo-row__third {
+                width: 100%;
+            }
+
+            .parallax-demo-card {
+                padding: 1.25em;
+            }
+
+            .parallax-demo-p {
+                font-size: .75em;
+            }
+
+            .parallax-demo-card__wrap {
+                flex-flow: column;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parallax-demo-wrap">
+        <div class="parallax-demo-hero">
+            <div data-parallax-scroll-start="top top" data-parallax="trigger" data-parallax-start="0"
+                data-parallax-end="40" class="parallax-demo-bg"><img
+                    src="https://cdn.prod.website-files.com/68348a3398ed51b777cbfd0d/683d928d5346bddfd3ac9f94_pawel-czerwinski-H8kzolaZjIM-unsplash.avif"
+                    class="parallax-demo-img"></div>
+            <h1 class="parallax-demo-h">Osmo Parallax Setup</h1>
+            <div class="parallax-demo-details">
+                <p class="parallax-demo-p">
+                    data-parallax-start=”0”<br>data-parallax-end=”40”<br>data-parallax-scroll-start=&quot;top top&quot;
+                </p>
+            </div>
+        </div>
+        <div class="parallax-demo-row">
+            <div class="parallax-demo-row__third">
+                <div data-parallax-disable="mobileLandscape" data-parallax="trigger" class="parallax-demo-card">
+                    <p class="parallax-demo-p">
+                        data-parallax-start=”20”<br>data-parallax-end=”-20”<br>data-parallax-disable=&quot;mobileLandscape&quot;
+                    </p>
+                </div>
+            </div>
+            <div class="parallax-demo-row__third">
+                <div data-parallax-disable="mobileLandscape" data-parallax="trigger" data-parallax-start="30"
+                    data-parallax-end="-30" class="parallax-demo-card">
+                    <p class="parallax-demo-p">
+                        data-parallax-start=”30”<br>data-parallax-end=”-30”<br>data-parallax-disable=&quot;mobileLandscape&quot;
+                    </p>
+                </div>
+            </div>
+            <div class="parallax-demo-row__third">
+                <div data-parallax-disable="mobileLandscape" data-parallax="trigger" data-parallax-start="40"
+                    data-parallax-end="-40" class="parallax-demo-card">
+                    <p class="parallax-demo-p">
+                        data-parallax-start=”40”<br>data-parallax-end=”-40”<br>data-parallax-disable=&quot;mobileLandscape&quot;
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="parallax-demo-row">
+            <h1 class="parallax-demo-h">One single function. Fully flexible setup with <span
+                    data-parallax-disable="mobile" data-parallax="trigger" data-parallax-end="0"
+                    data-parallax-scroll-end="center center" class="data-parallax-span">a</span><span
+                    data-parallax-disable="mobile" data-parallax="trigger" data-parallax-start="40"
+                    data-parallax-end="0" data-parallax-scroll-end="center center"
+                    class="data-parallax-span">t</span><span data-parallax-disable="mobile" data-parallax="trigger"
+                    data-parallax-start="60" data-parallax-end="0" data-parallax-scroll-end="center center"
+                    class="data-parallax-span">t</span><span data-parallax-disable="mobile" data-parallax="trigger"
+                    data-parallax-start="80" data-parallax-end="0" data-parallax-scroll-end="center center"
+                    class="data-parallax-span">r</span><span data-parallax-disable="mobile" data-parallax="trigger"
+                    data-parallax-start="100" data-parallax-end="0" data-parallax-scroll-end="center center"
+                    class="data-parallax-span">i</span><span data-parallax-disable="mobile" data-parallax="trigger"
+                    data-parallax-start="120" data-parallax-end="0" data-parallax-scroll-end="center center"
+                    class="data-parallax-span">b</span><span data-parallax-disable="mobile" data-parallax="trigger"
+                    data-parallax-start="140" data-parallax-end="0" data-parallax-scroll-end="center center"
+                    class="data-parallax-span">u</span><span data-parallax-disable="mobile" data-parallax="trigger"
+                    data-parallax-start="160" data-parallax-end="0" data-parallax-scroll-end="center center"
+                    class="data-parallax-span">t</span><span data-parallax-disable="mobile" data-parallax="trigger"
+                    data-parallax-start="180" data-parallax-end="0" data-parallax-scroll-end="center center"
+                    class="data-parallax-span">e</span><span data-parallax-disable="mobile" data-parallax="trigger"
+                    data-parallax-start="200" data-parallax-end="0" data-parallax-scroll-end="center center"
+                    class="data-parallax-span">s</span><span data-parallax-disable="mobile" data-parallax="trigger"
+                    data-parallax-start="220" data-parallax-end="0" data-parallax-scroll-end="center center"
+                    class="data-parallax-span">.</span></h1>
+        </div>
+        <div class="parallax-demo-row">
+            <div class="parallax-demo-row__half">
+                <div data-parallax-scrub="2" data-parallax="trigger" data-parallax-start="-30" data-parallax-end="0"
+                    class="parallax-demo-bg">
+                    <img src="https://cdn.prod.website-files.com/68348a3398ed51b777cbfd0d/683d928d8799f0d832b9a30c_pawel-czerwinski-V558Lx_ji6I-unsplash.avif"
+                        class="parallax-demo-img">
+                </div>
+                <div class="parallax-demo-details">
+                    <p class="parallax-demo-p">
+                        data-parallax-scrub=&quot;2&quot;<br>data-parallax-start=&quot;-30&quot;<br>data-parallax-end=&quot;0&quot;
+                    </p>
+                </div>
+            </div>
+            <div class="parallax-demo-row__half">
+                <div data-parallax-end="0" data-parallax="trigger" data-parallax-scrub="2" data-parallax-start="-30"
+                    class="parallax-demo-bg">
+                    <img src="https://cdn.prod.website-files.com/68348a3398ed51b777cbfd0d/683d928eb38a241d3d8801fe_pawel-czerwinski-d-gcPDVNO1E-unsplash.avif"
+                        class="parallax-demo-img">
+                </div>
+                <div class="parallax-demo-details">
+                    <p class="parallax-demo-p">
+                        data-parallax-scrub=&quot;2&quot;<br>data-parallax-start=&quot;-30&quot;<br>data-parallax-end=&quot;0&quot;
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="parallax-demo-row">
+            <h1 class="parallax-demo-h">Even control the parallax direc<span data-parallax-scroll-start="center 60%"
+                    data-parallax="trigger" data-parallax-direction="horizontal" data-parallax-scrub="2"
+                    data-parallax-start="0" data-parallax-end="200" class="data-parallax-span">t</span><span
+                    data-parallax-scroll-start="center 60%" data-parallax="trigger" data-parallax-direction="horizontal"
+                    data-parallax-scrub="2" data-parallax-start="0" data-parallax-end="400"
+                    class="data-parallax-span">i</span><span data-parallax-scroll-start="center 60%"
+                    data-parallax="trigger" data-parallax-direction="horizontal" data-parallax-scrub="2"
+                    data-parallax-start="0" data-parallax-end="600" class="data-parallax-span">o</span><span
+                    data-parallax-scroll-start="center 60%" data-parallax="trigger" data-parallax-direction="horizontal"
+                    data-parallax-scrub="2" data-parallax-start="0" data-parallax-end="800"
+                    class="data-parallax-span">n</span></h1>
+        </div>
+        <div class="parallax-demo-row">
+            <div class="parallax-demo-card__wrap">
+                <div data-parallax-scroll-end="center center" data-parallax="trigger"
+                    data-parallax-direction="horizontal" data-parallax-start="50" data-parallax-end="0"
+                    class="parallax-demo-card">
+                    <p class="parallax-demo-p">
+                        data-parallax-direction=&quot;horizontal&quot;<br>data-parallax-start=”50”<br>data-parallax-end=”0”<br>data-parallax-scroll-end=&quot;center
+                        center&quot;<br>data-parallax-scrub=&quot;true&quot;</p>
+                </div>
+                <div data-parallax-scroll-end="center center" data-parallax="trigger"
+                    data-parallax-direction="horizontal" data-parallax-start="50" data-parallax-end="0"
+                    data-parallax-scrub="0.5" class="parallax-demo-card">
+                    <p class="parallax-demo-p">
+                        data-parallax-direction=&quot;horizontal&quot;<br>data-parallax-start=”50”<br>data-parallax-end=”0”<br>data-parallax-scroll-end=&quot;center
+                        center&quot;<br>data-parallax-scrub=&quot;0.5&quot;</p>
+                </div>
+                <div data-parallax-scroll-end="center center" data-parallax="trigger"
+                    data-parallax-direction="horizontal" data-parallax-start="50" data-parallax-end="0"
+                    data-parallax-scrub="1" class="parallax-demo-card">
+                    <p class="parallax-demo-p">
+                        data-parallax-direction=&quot;horizontal&quot;<br>data-parallax-start=”50”<br>data-parallax-end=”0”<br>data-parallax-scroll-end=&quot;center
+                        center&quot;<br>data-parallax-scrub=&quot;1&quot;</p>
+                </div>
+            </div>
+        </div>
+        <div class="parallax-demo-row">
+            <h1 class="parallax-demo-h">
+                <span data-parallax-end="0" data-parallax="trigger" data-parallax-scroll-end="center center"
+                    class="data-parallax-span">H</span>
+                <span data-parallax-start="-100" data-parallax="trigger" data-parallax-scroll-end="center center"
+                    data-parallax-end="0" class="data-parallax-span">a</span>
+                <span data-parallax-start="200" data-parallax="trigger" data-parallax-scroll-end="center center"
+                    data-parallax-end="0" class="data-parallax-span">v</span>
+                <span data-parallax-start="50" data-parallax="trigger" data-parallax-scroll-end="center center"
+                    data-parallax-end="0" class="data-parallax-span">e</span>
+                <span data-parallax-start="-75" data-parallax="trigger" data-parallax-scroll-end="center center"
+                    data-parallax-end="0" class="data-parallax-span">f</span>
+                <span data-parallax-start="-300" data-parallax="trigger" data-parallax-scroll-end="center center"
+                    data-parallax-end="0" class="data-parallax-span">u</span>
+                <span data-parallax-start="400" data-parallax="trigger" data-parallax-scroll-end="center center"
+                    data-parallax-end="0" class="data-parallax-span">n</span>
+                <span data-parallax-start="-100" data-parallax="trigger" data-parallax-scroll-end="center center"
+                    data-parallax-end="0" class="data-parallax-span">!</span>
+            </h1>
+        </div>
+    </div>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger)
+
+        function initGlobalParallax() {
+            const mm = gsap.matchMedia()
+
+            mm.add(
+                {
+                    isMobile: "(max-width:479px)",
+                    isMobileLandscape: "(max-width:767px)",
+                    isTablet: "(max-width:991px)",
+                    isDesktop: "(min-width:992px)"
+                },
+                (context) => {
+                    const { isMobile, isMobileLandscape, isTablet } = context.conditions
+
+                    const ctx = gsap.context(() => {
+                        document.querySelectorAll('[data-parallax="trigger"]').forEach((trigger) => {
+                            // Check if this trigger has to be disabled on smaller breakpoints
+                            const disable = trigger.getAttribute("data-parallax-disable")
+                            if (
+                                (disable === "mobile" && isMobile) ||
+                                (disable === "mobileLandscape" && isMobileLandscape) ||
+                                (disable === "tablet" && isTablet)
+                            ) {
+                                return
+                            }
+
+                            // Optional: you can target an element inside a trigger if necessary 
+                            const target = trigger.querySelector('[data-parallax="target"]') || trigger
+
+                            // Get the direction value to decide between xPercent or yPercent tween
+                            const direction = trigger.getAttribute("data-parallax-direction") || "vertical"
+                            const prop = direction === "horizontal" ? "xPercent" : "yPercent"
+
+                            // Get the scrub value, our default is 'true' because that feels nice with Lenis
+                            const scrubAttr = trigger.getAttribute("data-parallax-scrub")
+                            const scrub = scrubAttr ? parseFloat(scrubAttr) : true
+
+                            // Get the start position in % 
+                            const startAttr = trigger.getAttribute("data-parallax-start")
+                            const startVal = startAttr !== null ? parseFloat(startAttr) : 20
+
+                            // Get the end position in %
+                            const endAttr = trigger.getAttribute("data-parallax-end")
+                            const endVal = endAttr !== null ? parseFloat(endAttr) : -20
+
+                            // Get the start value of the ScrollTrigger
+                            const scrollStartRaw = trigger.getAttribute("data-parallax-scroll-start") || "top bottom"
+                            const scrollStart = `clamp(${scrollStartRaw})`
+
+                            // Get the end value of the ScrollTrigger  
+                            const scrollEndRaw = trigger.getAttribute("data-parallax-scroll-end") || "bottom top"
+                            const scrollEnd = `clamp(${scrollEndRaw})`
+
+                            gsap.fromTo(
+                                target,
+                                { [prop]: startVal },
+                                {
+                                    [prop]: endVal,
+                                    ease: "none",
+                                    scrollTrigger: {
+                                        trigger,
+                                        start: scrollStart,
+                                        end: scrollEnd,
+                                        scrub,
+                                    },
+                                }
+                            )
+                        })
+                    })
+
+                    return () => ctx.revert()
+                }
+            )
+        }
+
+        // Initialize Global Parallax Setup
+        document.addEventListener("DOMContentLoaded", () => {
+            initGlobalParallax()
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TrendForce Seminar — May 12, 2026 · New York</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&family=Lato:wght@300;400;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="grain" data-variant="editorial">
+
+  <!-- Preloader -->
+  <div id="pre">
+    <span>TrendForce · Seminar · 2026</span>
+    <span id="pre-pct">0%</span>
+    <span class="bar" id="pre-bar"></span>
+  </div>
+
+  <!-- Ambient blobs -->
+  <div aria-hidden="true" class="ambient-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor-dot" id="cursor"></div>
+
+  <!-- ========================================= NAV ========================================= -->
+  <header id="nav" class="fixed top-0 left-0 right-0 z-[70] transition-all">
+    <div class="flex items-center justify-between px-6 md:px-10 py-5">
+      <a href="#top" class="flex items-center">
+        <img src="asset/img/TF-logo.svg" alt="TrendForce Logo" class="h-10">
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm tracking-[0.22em]">
+        <a href="#overview" class="nav-link">關於研討會</a>
+        <a href="#agenda" class="nav-link">議程表</a>
+        <a href="#giveaway" class="nav-link">活動好禮</a>
+        <a href="#partners" class="nav-link">合作夥伴</a>
+      </nav>
+      <a href="#" id="register-cta" class="hidden md:inline-flex btn-primary">
+        <span class="text-base">報名查詢</span>
+        <span class="arrow text-base">⟶</span>
+      </a>
+      <!-- Hamburger (mobile only) -->
+      <button id="mob-toggle" class="md:hidden relative z-[80] flex flex-col justify-center gap-[5px] w-11 h-11"
+        aria-label="開啟選單" aria-expanded="false">
+        <span class="mob-line block w-full h-px" style="background:var(--ink)"></span>
+        <span class="mob-line block w-full h-px" style="background:var(--ink)"></span>
+        <span class="mob-line block w-3/4 h-px" style="background:var(--ink)"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div id="mob-nav" aria-hidden="true">
+    <nav class="mob-nav-items flex flex-col gap-5 mb-auto">
+      <a href="#overview" class="mob-nav-link">關於研討會</a>
+      <a href="#agenda" class="mob-nav-link">議程表</a>
+      <a href="#giveaway" class="mob-nav-link">活動好禮</a>
+      <a href="#partners" class="mob-nav-link">合作夥伴</a>
+      <a href="#venue" class="mob-nav-link">交通資訊</a>
+    </nav>
+    <div class="mob-nav-footer">
+      <a href="#" class="btn-primary w-full justify-between" style="font-size:13px; letter-spacing:0.18em;">
+        <span>報名查詢</span>
+        <span>⟶</span>
+      </a>
+      <div class="mt-6 text-[11px] tracking-[0.18em] uppercase" style="color:rgba(249,248,246,0.35)">TrendForce ·
+        Seminar · 2026</div>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- ========================================= HERO ========================================= -->
+    <section id="hero-section" class="relative flex flex-col"
+      style="height:100svh; min-height:560px; background:var(--bg);">
+
+
+      <!-- Center: text image + photo -->
+      <div
+        class="flex-1 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-14 px-6 md:px-16 py-4 min-h-0">
+        <img id="hero-text-img" src="asset/img/HeroSection_Text.png" alt="TrendForce Seminar"
+          class="max-h-[24vh] md:max-h-[50vh] min-w-0 w-auto object-contain select-none" draggable="false"
+          loading="eager" decoding="async">
+        <div id="hero-img-panel" class="min-w-0 overflow-hidden">
+          <img id="hero-bg-img" src="asset/img/HeroSection_A.png" alt="" role="presentation"
+            class="max-h-[45vh] md:max-h-[62vh] w-auto object-contain" loading="eager" decoding="async">
+        </div>
+      </div>
+
+
+    </section>
+
+    <!-- ========================================= MARQUEE ========================================= -->
+    <div class="border-y rule py-4 overflow-hidden">
+      <div class="marquee text-sm tracking-[0.22em] uppercase" style="color:var(--muted)">
+        <span>AI 驅動智慧 · 能源新版圖 · AI 驅動智慧 · 能源新版圖 · AI 驅動智慧 · 能源新版圖 · AI 驅動智慧 · 能源新版圖 · AI 驅動智慧 · 能源新版圖 · AI 驅動智慧 · 能源新版圖
+          · </span>
+        <span>AI 驅動智慧 · 能源新版圖 · AI 驅動智慧 · 能源新版圖 · AI 驅動智慧 · 能源新版圖 · AI 驅動智慧 · 能源新版圖 · AI 驅動智慧 · 能源新版圖 · AI 驅動智慧 · 能源新版圖
+          · </span>
+      </div>
+    </div>
+
+    <!-- ========================================= OVERVIEW ========================================= -->
+    <section id="overview" class="px-6 md:px-10 py-28 md:py-20 relative">
+      <div class="grid grid-cols-12 gap-6">
+        <div class="col-span-12 md:col-span-3">
+          <div class="sticky top-28">
+            <div class="section-label mb-4">Highlights</div>
+            <p class="text-4xl font-bold">關鍵議題</p>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-9">
+          <p id="overview-copy" class="text-4xl md:text-5xl leading-[1.5] tracking-[-0.015em] font-bold">
+            電力風險與減碳挑戰下的企業競爭力重塑
+          </p>
+          <p class="text-lg/[1.8] tracking-[0.06em] mt-5" style="color:var(--muted)">
+            <span class="block  mb-5">
+              2050 淨零排放已成為全球產業共識，但隨著 AI 從雲端走向落地應用，企業在推動數位轉型的同時，也正面臨用電需求暴增與減碳壓力並進的挑戰。
+            </span>
+            <span class="block mb-5">
+              轉型不再只是技術升級，而是 AI 與綠色科技深度整合的系統工程，關鍵在於如何將 AI 從「耗能者」轉化為「節能者」，在兼顧營運效能下確保能源供給穩定，支撐企業永續成長。
+            </span>
+            <span class="block mb-5  ">
+              本次論壇聚焦 AI 與能源轉型的實務交會點，從政策趨勢、電力韌性到智慧碳管理，解析 再生能源與儲能、綠電 PPA 與表後儲能等低碳布局策略，邀請產官研專家分享如何以 AI
+              優化能源決策，協助企業在綠色供應鏈競局中打造可落地、可持續的淨零解方。
+            </span>
+          </p>
+          <!-- Highlights Stacking Cards -->
+          <div class="mt-16 highlight-stack" data-stacking-cards-init="" data-stacking-cards-desktop="true"
+            data-stacking-cards-tablet="true" data-stacking-cards-mobile="true"
+            data-stacking-cards-desktop-x="0em, 0em, 0em" data-stacking-cards-desktop-y="2em, 0em, 2.5em"
+            data-stacking-cards-desktop-rotate="0, 0, 0" data-stacking-cards-tablet-x="0em, 0em, 0em"
+            data-stacking-cards-tablet-y="1.5em, 0em, 2em" data-stacking-cards-tablet-rotate="0, 0, 0">
+            <div class="highlight-stack__list">
+
+              <div data-stacking-card="" class="highlight-stack__item">
+                <div data-stacking-card-target="" class="ph-face highlight-card" style="box-shadow:var(--shadow-sm);">
+                  <div class="highlight-card__img" data-parallax="trigger" data-parallax-start="12"
+                    data-parallax-end="-12" data-parallax-scrub="2" data-parallax-disable="mobile">
+                    <img src="asset/img/highlight-img-01.png" loading="lazy" decoding="async">
+                  </div>
+                  <div class="highlight-card__body">
+                    <div class="section-label mb-4">01</div>
+                    <h3 class="text-3xl md:text-4xl font-semibold leading-tight mb-3" style="color:var(--text)">智慧算力節能
+                    </h3>
+                    <p class="text-base leading-[1.8]" style="color:var(--muted)">將 AI
+                      從耗能黑洞轉化為節能引擎，透過智慧管理優化運算效能，在算力躍進的同時精準掌控用電成本。</p>
+                  </div>
+                </div>
+              </div>
+
+              <div data-stacking-card="" class="highlight-stack__item">
+                <div data-stacking-card-target="" class="ph-face highlight-card" style="box-shadow:var(--shadow-sm);">
+                  <div class="highlight-card__img" data-parallax="trigger" data-parallax-start="12"
+                    data-parallax-end="-12" data-parallax-scrub="2" data-parallax-disable="mobile">
+                    <img src="asset/img/highlight-img-02.png" loading="lazy" decoding="async">
+                  </div>
+                  <div class="highlight-card__body">
+                    <div class="section-label mb-4">02</div>
+                    <h3 class="text-3xl md:text-4xl font-semibold leading-tight mb-3" style="color:var(--text)">數位減碳路徑
+                    </h3>
+                    <p class="text-base leading-[1.8]" style="color:var(--muted)">整合 AIoT
+                      數據採集，實現自動化碳盤查與能源調度，將零碳路徑轉化為可視化的營運競爭優勢。</p>
+                  </div>
+                </div>
+              </div>
+
+              <div data-stacking-card="" class="highlight-stack__item">
+                <div data-stacking-card-target="" class="ph-face highlight-card" style="box-shadow:var(--shadow-sm);">
+                  <div class="highlight-card__img" data-parallax="trigger" data-parallax-start="12"
+                    data-parallax-end="-12" data-parallax-scrub="2" data-parallax-disable="mobile">
+                    <img src="asset/img/highlight-img-03.png" loading="lazy" decoding="async">
+                  </div>
+                  <div class="highlight-card__body">
+                    <div class="section-label mb-4">03</div>
+                    <h3 class="text-3xl md:text-4xl font-semibold leading-tight mb-3" style="color:var(--text)">全球合規實戰
+                    </h3>
+                    <p class="text-base leading-[1.8]" style="color:var(--muted)">直擊 CBAM
+                      與國際減碳法規要求，透過數位查證快速對接全球標準，確保企業在綠色供應鏈中的訂單優先權。</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================= AGENDA ========================================= -->
+    <section id="agenda" class="px-6 md:px-10 py-28 md:py-20 border-t rule">
+      <div class="flex items-end justify-between flex-wrap gap-6 mb-12">
+        <div>
+          <div class="section-label mb-4">Agenda</div>
+          <h2 class="display text-[4rem] md:text-[6rem]">議程<span style="color:var(--accent)">資訊</span></h2>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-x-12 gap-y-6 mb-12  rule">
+        <div class="flex flex-col gap-1 md:border-r md:pr-10">
+          <span class="text-sm" style="color:var(--muted)">日期</span>
+          <span class="text-2xl md:text-4xl leading-tight">2026年4月24日 ( 五 )</span>
+        </div>
+        <div class="flex flex-col gap-1  md:border-r md:pr-10">
+          <span class="text-sm" style="color:var(--muted)">時間</span>
+          <span class="text-2xl md:text-4xl leading-tight">14:00 — 16:00 <span class="block text-[1rem]"
+              style="color:var(--muted)">（13:00 開始報到）</span>
+          </span>
+        </div>
+        <div class="flex flex-col gap-1 md:border-r md:pr-10 ">
+          <span class="text-sm" style="color:var(--muted)">地點</span>
+          <span class="text-2xl md:text-4xl leading-tight">政大公企中心 A431 會議廳</span>
+          <span class="block text-[1rem]" style="color:var(--muted)">（ 臺北市大安區金華街187號 ）</span>
+        </div>
+      </div>
+
+      <!-- Agenda table: column headers -->
+      <div class="border-t rule">
+        <div id="agenda-col-headers"
+          class="grid grid-cols-12 py-4 text-[10px] tracking-[0.22em] uppercase border-b rule"
+          style="color:var(--muted)">
+          <div class="col-span-2">Time</div>
+          <div class="col-span-6 md:col-span-7">Session</div>
+          <div class="col-span-4 md:col-span-3 text-right md:text-left">Speaker</div>
+        </div>
+
+        <!-- Rows -->
+        <div id="agenda-rows">
+          <!-- Registration -->
+          <a href="#agenda" class="agenda-row grid grid-cols-12 items-start py-6 border-b rule group opacity-70">
+            <div class="col-span-2 text-sm md:text-base tracking-[0.06em] text-[var(--ink)]">13:00 – 13:30</div>
+            <div class="col-span-6 md:col-span-7 pr-4">
+              <div class="ag-topic text-2xl md:text-3xl leading-[1.15] transition-colors">活動報到</div>
+            </div>
+            <div class="col-span-4 md:col-span-3 text-right md:text-left">
+              <div class="text-[10px] tracking-[0.2em] uppercase text-[#7c756e]">—</div>
+            </div>
+          </a>
+          <!-- Session 1 (accordion) -->
+          <div class="agenda-row border-b rule">
+            <button class="ag-trigger w-full grid grid-cols-12 items-start py-6 group text-left">
+              <div class="col-span-2 text-sm md:text-base tracking-[0.06em] text-[var(--ink)]">13:30 – 13:40</div>
+              <div class="col-span-6 md:col-span-7 pr-4">
+                <div class="ag-topic text-[1.4rem] md:text-[1.9rem] leading-[1.4] transition-colors">AI
+                  與能源轉型交會，企業面臨用電挑戰與風險</div>
+              </div>
+              <div class="col-span-3 md:col-span-2 text-right md:text-left">
+                <div class="text-lg tracking-[0.04em]">黃志文</div>
+                <div class="text-sm tracking-[0.04em] text-[#7c756e] mt-1">國家再生能源憑證中心 主任
+                </div>
+              </div>
+              <div class="col-span-1 flex justify-end pt-1">
+                <span class="ag-icon text-[1.4rem] leading-none" style="color:var(--accent)">+</span>
+              </div>
+
+            </button>
+            <div class="ag-body">
+              <div class="grid grid-cols-12 pb-8">
+                <div class="col-span-2"></div>
+                <div class="col-span-10 md:col-span-7 text-sm leading-[1.8] text-[--muted]">面對 2050
+                  淨零目標，臺灣企業正面臨前所未有的挑戰。從國內淨零法規的遵循、ESG 永續評鑑的實戰，到國際供應鏈對於RE100與碳中和的要求，企業在淨零浪潮下，正處於轉型焦慮與合規壓力的十字路口。
+                  在此困局中，「再生能源憑證（T-REC）」是不可或缺的購買綠電工具。由再生能源憑證中心核發的憑證，是台灣唯一具官方公信力的「綠電身分證」，更是企業接軌國際、化解外部壓力的最強護照。
+                  本局持續推動「中小企業平價綠電專案」、協助「無電號承租戶」取得憑證等專案，並致力於建立一個更高效、公平的綠電交易體系。未來，我們將研議更多元彈性的措施，確保每一間企業都能順利加入綠電交易市場。</div>
+              </div>
+            </div>
+          </div>
+          <!-- Session 2-->
+          <div class="agenda-row border-b rule">
+            <div class=" w-full grid grid-cols-12 items-start py-6 group text-left">
+              <div class="col-span-2 text-sm md:text-base tracking-[0.06em] text-[var(--ink)]">13:40 – 14:05</div>
+              <div class="col-span-6 md:col-span-7 pr-4">
+                <div class="ag-topic text-[1.4rem] md:text-[1.9rem] leading-[1.4] transition-colors">AI
+                  時代的電力解方，電力管理技術實現高效率與深度節能</div>
+              </div>
+              <div class="col-span-3 md:col-span-2 text-right md:text-left">
+                <div class="text-lg tracking-[0.04em]">林艾蓁</div>
+                <div class="text-sm text-[#7c756e] mt-1">Eaton 業務經理
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- Session 3-->
+          <div class="agenda-row border-b rule">
+            <div class="w-full grid grid-cols-12 items-start py-6 group text-left">
+              <div class="col-span-2 text-sm md:text-base tracking-[0.06em] text-[var(--ink)]">14:05 – 14:30</div>
+              <div class="col-span-6 md:col-span-7 pr-4">
+                <div class="ag-topic text-[1.4rem] md:text-[1.9rem] leading-[1.4] transition-colors">
+                  電力風險時代的企業能源策略：儲能系統整合與應用</div>
+              </div>
+              <div class="col-span-3 md:col-span-2 text-right md:text-left">
+                <div class="text-lg tracking-[0.04em]">陳彥勳</div>
+                <div class="text-sm tracking-[0.2em] uppercase text-[#7c756e] mt-1">盛齊綠能 總經理
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- Session 4-->
+          <div class="agenda-row border-b rule">
+            <button class="ag-trigger w-full grid grid-cols-12 items-start py-6 group text-left">
+              <div class="col-span-2 text-sm md:text-base tracking-[0.06em] text-[var(--ink)]">14:30 – 14:55</div>
+              <div class="col-span-6 md:col-span-7 pr-4">
+                <div class="ag-topic text-[1.4rem] md:text-[1.9rem] leading-[1.4] transition-colors">
+                  企業用電新模式：表後儲能的經濟效益與營運韌性</div>
+              </div>
+              <div class="col-span-3 md:col-span-2 text-right md:text-left">
+                <div class="text-lg tracking-[0.04em]">袁芳偉 博士</div>
+                <div class="text-sm tracking-[0.04em] uppercase text-[#7c756e] mt-1">星星電力電力市場策略處處長
+                </div>
+              </div>
+              <div class="col-span-1 flex justify-end pt-1">
+                <span class="ag-icon text-[1.4rem] leading-none" style="color:var(--accent)">+</span>
+              </div>
+
+            </button>
+            <div class="ag-body">
+              <div class="grid grid-cols-12 pb-8">
+                <div class="col-span-2"></div>
+                <div class="col-span-10 md:col-span-7 text-sm leading-[1.8] text-[--muted]">
+                  在電價波動與淨零轉型壓力下，企業用電正從成本管理走向價值經營。星星電力將聚焦表後儲能的實際經濟效益，說明企業如何透過儲能系統降低電費支出，並結合電力市場機制創造額外收益，讓電力不再只是成本，而成為可經營的資產。同時，也將從營運面探討表後儲能如何提升電力韌性，強化備援能力與供電穩定性，並為企業ESG目標與能源自主布局帶來長期助益，從實務案例出發，解析企業導入儲能後的整體價值轉型。
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Networking -->
+          <div class="agenda-row grid grid-cols-12 items-start py-6 border-b rule group opacity-70">
+            <div class="col-span-2 text-sm md:text-base tracking-[0.06em] text-[var(--ink)]">14:55 - 15:10</div>
+            <div class="col-span-6 md:col-span-7 pr-4">
+              <div class="ag-topic text-[1.4rem] md:text-[1.9rem] leading-[1.4] transition-colors">休息時間 / 攤位參觀 / 互動交流
+              </div>
+            </div>
+            <div class="col-span-4 md:col-span-3 text-right md:text-left">
+              <div class="text-[10px] tracking-[0.2em] uppercase text-[#7c756e]">—</div>
+            </div>
+          </div>
+
+          <!-- Session 5-->
+          <div class="agenda-row border-b rule">
+            <div class="w-full grid grid-cols-12 items-start py-6 group text-left">
+              <div class="col-span-2 text-sm md:text-base tracking-[0.06em] text-[var(--ink)]">15:10 - 15:35</div>
+              <div class="col-span-6 md:col-span-7 pr-4">
+                <div class="ag-topic text-[1.4rem] md:text-[1.9rem] leading-[1.4] transition-colors">
+                  智慧型商用光儲新市場-客製化企業的彈性微電網能源系統</div>
+              </div>
+              <div class="col-span-3 md:col-span-2 text-right md:text-left">
+                <div class="text-lg tracking-[0.04em]">蘇益立 博士</div>
+                <div class="text-sm tracking-[0.04em] text-[#7c756e] mt-1">SolarEdge 資深技術行銷經理
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Session 6-->
+          <div class="agenda-row border-b rule">
+            <div class="w-full grid grid-cols-12 items-start py-6 group text-left">
+              <div class="col-span-2 text-sm md:text-base tracking-[0.06em] text-[var(--ink)]">16:00 - 16:25</div>
+              <div class="col-span-6 md:col-span-7 pr-4">
+                <div class="ag-topic text-[1.4rem] md:text-[1.9rem] leading-[1.4] transition-colors">
+                  數據驅動決策：企業智慧碳管理新思維</div>
+              </div>
+              <div class="col-span-3 md:col-span-2 text-right md:text-left">
+                <div class="text-lg tracking-[0.04em]">邱莉婷</div>
+                <div class="text-sm tracking-[0.04em] text-[#7c756e] mt-1">希達數位 永續策略發展中心 總監
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- LuckyDraw -->
+          <div class="agenda-row grid grid-cols-12 items-start py-6 border-b rule group opacity-70">
+            <div class="col-span-2 text-sm md:text-base tracking-[0.06em] text-[var(--ink)]">16:25 - 16:30</div>
+            <div class="col-span-6 md:col-span-7 pr-4">
+              <div class="ag-topic text-[1.4rem] md:text-[1.9rem] leading-[1.4] transition-colors">Lucky Draw
+              </div>
+            </div>
+            <div class="col-span-4 md:col-span-3 text-right md:text-left">
+              <div class="text-[10px] tracking-[0.2em] uppercase text-[#7c756e]">—</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm text-[#7c756e] mt-8">註：本議程隨時會有變動，主辦單位有更動講師及議題的權利，將不另行通知，請留意科技新報公布在網路上關於本次議程的最新資訊。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================= SPEAKERS ========================================= -->
+    <section id="speakers" class="px-6 md:px-10 py-28 md:py-20 border-t rule">
+      <div class="flex items-end justify-between flex-wrap gap-6 mb-16">
+        <div>
+          <div class="section-label mb-5">Speakers</div>
+          <h2 class="display text-[4rem] md:text-[6rem]">講師<span style="color:var(--accent); font-weight:400;">介紹</span>
+          </h2>
+        </div>
+      </div>
+      <div id="speakers-grid" class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12">
+        <!-- Avril Wu -->
+        <div class="sp-card group">
+          <div class="relative aspect-[4/5] overflow-hidden">
+            <div class="sp-parallax-bg" data-parallax="trigger" data-parallax-start="8" data-parallax-end="-8"
+              data-parallax-scrub="1.5" data-parallax-disable="mobile">
+              <img src="asset/img/AvrilWu.jpg" alt="Avril Wu" class="sp-photo w-full h-full object-cover object-top"
+                loading="lazy" decoding="async">
+            </div>
+            <div class="absolute top-4 left-4 text-xl tracking-[0.22em] uppercase text-[#7c756e]">[ 01 ]</div>
+            <div class="absolute bottom-0 left-0 right-0 px-5 pt-20 pb-5"
+              style="background:linear-gradient(to top,rgba(26,22,18,0.82) 0%,transparent 100%);">
+              <h3 class="text-3xl leading-tight text-white">吳雅婷</h3>
+              <div class="text-sm tracking-[0.2em] uppercase mt-1 text-white opacity-70">資深研究副總</div>
+            </div>
+            <div class="sp-mask absolute inset-0 bg-[var(--bg)] opacity-20 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full transition-[width] duration-700"
+              style="background:var(--accent)"></div>
+          </div>
+          <p class="mt-5 text-sm leading-[1.8]">Avril Wu 擁有超過十年的專業經驗，專注於記憶體產品研究的各個面向。
+            在加入 TrendForce 並任職長達十年之前，Avril 曾於一家知名記憶體公司工作超過兩年，期間同樣負責相關領域的研究。她最初專注於 DRAM 市場，並於 2019 年將專業擴展至 NAND
+            Flash，如今已具備涵蓋整體記憶體產業的完整分析能力。</p>
+        </div>
+        <div class="sp-card group">
+          <div class="relative aspect-[4/5] overflow-hidden">
+            <div class="sp-parallax-bg" data-parallax="trigger" data-parallax-start="8" data-parallax-end="-8"
+              data-parallax-scrub="1.5" data-parallax-disable="mobile">
+              <img src="asset/img/BryanAo.jpg" alt="Bryan Ao" class="sp-photo w-full h-full object-cover object-top"
+                loading="lazy" decoding="async">
+            </div>
+            <div class="absolute top-4 left-4 text-xl tracking-[0.22em] uppercase text-[#7c756e]">[ 02 ]</div>
+            <div class="absolute bottom-0 left-0 right-0 px-5 pt-20 pb-5"
+              style="background:linear-gradient(to top,rgba(26,22,18,0.82) 0%,transparent 100%);">
+              <h3 class="text-3xl leading-tight text-white">敖國峰</h3>
+              <div class="text-sm uppercase mt-1 text-white opacity-70">研究經理</div>
+            </div>
+            <div class="sp-mask absolute inset-0 bg-[var(--bg)] opacity-20 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full transition-[width] duration-700"
+              style="background:var(--accent)"></div>
+          </div>
+          <p class="mt-5 text-sm leading-[1.8]">Bryan 專注於伺服器 OEM
+            廠商、資料中心營運商，以及 AI／邊緣運算服務提供者所使用的 NAND Flash 儲存解決方案之需求趨勢分析。在此之前，他曾任職於一家電子零組件通路商，專門負責行動裝置記憶體解決方案與 SSD 控制器 IC
+            相關業務。</p>
+        </div>
+
+        <div class="sp-card group">
+          <div class="relative aspect-[4/5] overflow-hidden">
+            <div class="sp-parallax-bg" data-parallax="trigger" data-parallax-start="8" data-parallax-end="-8"
+              data-parallax-scrub="1.5" data-parallax-disable="mobile">
+              <img src="asset/img/EllieWang.jpg" alt="Ellie Wang" class="sp-photo w-full h-full object-cover object-top"
+                loading="lazy" decoding="async">
+            </div>
+            <div class="absolute top-4 left-4 text-xl tracking-[0.22em] uppercase text-[#7c756e]">[ 03 ]</div>
+            <div class="absolute bottom-0 left-0 right-0 px-5 pt-20 pb-5"
+              style="background:linear-gradient(to top,rgba(26,22,18,0.82) 0%,transparent 100%);">
+              <h3 class="text-[1.8rem] leading-tight text-white">王豫琪</h3>
+              <div class="text-sm  uppercase mt-1 text-white opacity-70">資深分析師</div>
+            </div>
+            <div class="sp-mask absolute inset-0 bg-[var(--bg)] opacity-20 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full transition-[width] duration-700"
+              style="background:var(--accent)"></div>
+          </div>
+          <p class="mt-5 text-sm leading-[1.8]">主要負責在 DRAM 供給端產能、技術發展，以及消費端需求的市場分析與研究。</p>
+        </div>
+        <!-- Joanne Chiao -->
+        <div class="sp-card group">
+          <div class="relative aspect-[4/5] overflow-hidden">
+            <div class="sp-parallax-bg" data-parallax="trigger" data-parallax-start="8" data-parallax-end="-8"
+              data-parallax-scrub="1.5" data-parallax-disable="mobile">
+              <img src="asset/img/JoanneChiao.jpg" alt="Joanne Chiao"
+                class="sp-photo w-full h-full object-cover object-top" loading="lazy" decoding="async">
+            </div>
+            <div class="absolute top-4 left-4 text-xl tracking-[0.22em] uppercase text-[#7c756e]">[ 04 ]</div>
+            <div class="absolute bottom-0 left-0 right-0 px-5 pt-20 pb-5"
+              style="background:linear-gradient(to top,rgba(26,22,18,0.82) 0%,transparent 100%);">
+              <h3 class="text-[1.8rem] leading-tight text-white">趙亦圖</h3>
+              <div class="text-sm uppercase mt-1 text-white opacity-70">研究經理</div>
+            </div>
+            <div class="sp-mask absolute inset-0 bg-[var(--bg)] opacity-20 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full transition-[width] duration-700"
+              style="background:var(--accent)"></div>
+          </div>
+          <p class="mt-5 text-sm leading-[1.8]">Joanne 的研究重點在晶圓代工市場分析——包括產能、技術發展，以及客戶需求。</p>
+        </div>
+        <div class="sp-card group">
+          <div class="relative aspect-[4/5] overflow-hidden">
+            <div class="sp-parallax-bg" data-parallax="trigger" data-parallax-start="8" data-parallax-end="-8"
+              data-parallax-scrub="1.5" data-parallax-disable="mobile">
+              <img src="asset/img/FionChiu.jpg" alt="Fion Chiu" class="sp-photo w-full h-full object-cover object-top"
+                loading="lazy" decoding="async">
+            </div>
+            <div class="absolute top-4 left-4 text-xl tracking-[0.22em] uppercase text-[#7c756e]">[ 05 ]</div>
+            <div class="absolute bottom-0 left-0 right-0 px-5 pt-20 pb-5"
+              style="background:linear-gradient(to top,rgba(26,22,18,0.82) 0%,transparent 100%);">
+              <h3 class="text-[1.8rem] leading-tight text-white">邱珮雯</h3>
+              <div class="text-sm uppercase mt-1 text-white opacity-70">分析師</div>
+            </div>
+            <div class="sp-mask absolute inset-0 bg-[var(--bg)] opacity-20 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full transition-[width] duration-700"
+              style="background:var(--accent)"></div>
+          </div>
+          <p class="mt-5 text-sm leading-[1.8]">Fion 擁有多年科技產業的股票研究經驗，透過評估公司表現與市場動態，提供具價值的投資建議。在 TrendForce 任職期間，她的研究重點為
+            AI 伺服器，特別聚焦於 HPC／AI 晶片與散熱解決方案。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================= GIVEAWAY ========================================= -->
+    <section id="giveaway" class="px-6 md:px-10 py-28 md:py-20 border-t rule">
+      <div class="flex items-end justify-between flex-wrap gap-6 mb-16">
+        <div>
+          <div class="section-label mb-5">Giveaway</div>
+          <h2 class="display text-[4rem] md:text-[6rem]">活動<span style="color:var(--accent); font-weight:400;">好禮</span>
+          </h2>
+        </div>
+        <div class="text-sm tracking-[0.22em]  max-w-xs" style="color:var(--muted)">
+          出席活動，抽好禮
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Lucky Draw -->
+        <div class="flex flex-col justify-between p-8 border rule"
+          style="background:linear-gradient(145deg,#ffffff 0%,#f7f4ef 100%); box-shadow:var(--shadow-sm);">
+          <div>
+            <div class="section-label mb-5">抽獎禮</div>
+            <img src="asset/img/mouse.jpg" alt="Vertical Mouse" loading="lazy" decoding="async">
+            <h3 class="text-[1.7rem] leading-snug mb-3">人體工學垂直<br />無線藍牙滑鼠</h3>
+          </div>
+          <div class="mt-8 pt-6 border-t rule flex items-baseline gap-3">
+            <span class="text-[3rem] font-bold leading-none" style="color:var(--accent)">3</span>
+            <span class="text-sm tracking-[0.22em] uppercase" style="color:var(--muted)">名</span>
+          </div>
+        </div>
+        <!-- Check-in Gift -->
+        <div class="flex flex-col justify-between p-8 border rule"
+          style="background:linear-gradient(145deg,#ffffff 0%,#f7f4ef 100%); box-shadow:var(--shadow-sm);">
+          <div>
+            <div class="section-label mb-5">報到禮</div>
+            <img src="asset/img/7-11Ticket.png" alt="7-11 Voucher" loading="lazy" decoding="async">
+            <h3 class="text-[1.7rem] leading-snug mb-3">7-11 禮券</h3>
+          </div>
+          <div class="mt-8 pt-6 border-t rule flex items-baseline gap-3">
+            <span class="text-[3rem] font-bold leading-none" style="color:var(--accent)">送完為止</span>
+          </div>
+        </div>
+        <!-- Points Gift -->
+        <div class="flex flex-col justify-between p-8 border rule"
+          style="background:linear-gradient(145deg,#ffffff 0%,#f7f4ef 100%); box-shadow:var(--shadow-sm);">
+          <div>
+            <div class="section-label mb-5">集點禮</div>
+            <img src="asset/img/7-11Cafe.jpg" alt="7-11 Voucher" loading="lazy" decoding="async">
+            <h3 class="text-[1.7rem] leading-snug mb-3">7-11 咖啡提貨卡</h3>
+          </div>
+          <div class="mt-8 pt-6 border-t rule flex items-baseline gap-3">
+            <span class="text-[3rem] font-bold leading-none" style="color:var(--accent)">50</span>
+            <span class="text-sm tracking-[0.22em] uppercase" style="color:var(--muted)">份</span>
+          </div>
+        </div>
+        <!-- Partner Gift -->
+        <div class="flex flex-col justify-between p-8 border rule"
+          style="background:linear-gradient(145deg,#ffffff 0%,#f7f4ef 100%); box-shadow:var(--shadow-sm);">
+          <div>
+            <div class="section-label mb-5">Partner Gift</div>
+            <h3 class="text-[1.7rem] leading-snug mb-3">神秘禮物</h3>
+            <p class="text-[11px] tracking-[0.06em]" style="color:var(--muted)">Corporate Partner Mystery Gift
+            </p>
+          </div>
+          <div class="mt-8 pt-6 border-t rule flex items-baseline gap-3">
+            <span class="text-[3.5rem] leading-none" style="color:var(--accent)">1</span>
+            <span class="text-[10px] tracking-[0.22em] uppercase" style="color:var(--muted)">Prize</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 注意事項 -->
+      <div class="mt-16 border-t rule pt-10 grid grid-cols-12 gap-6">
+        <div class="col-span-12 md:col-span-2 section-label">抽獎禮領獎注意事項</div>
+        <ul class="col-span-12 md:col-span-10 text-sm leading-[1.8] space-y-3" style="color:var(--text)">
+          <li class="flex gap-4"><span style="color:var(--muted)">01</span><span>須於報到時提供一張公司名片抽獎，得獎人須在現場不得代領。</span>
+          </li>
+          <li class="flex gap-4"><span
+              style="color:var(--muted)">02</span><span>本活動抽獎贈品以實物為準，限中獎人本人領取，中獎人不可要求折抵現金、轉讓他人領獎或更換獎項內容。若因庫存限制或供應問題導致原定獎品無法提供，我們將以其他等值且同類型商品作為替代，最終以現場公布或官方通知為準。</span>
+          </li>
+          <li class="flex gap-4"><span
+              style="color:var(--muted)">03</span><span>參加者或得獎者有違反本活動辦法及法令，或以不正當、詐欺或舞弊之行為參加本活動，主辦單位有權取消其抽獎或得獎資格，且主辦單位有權追究其法律責任。</span>
+          </li>
+          <li class="flex gap-4"><span
+              style="color:var(--muted)">04</span><span>主辦單位保留變更、修改或終止本活動之權利，並保留對得獎人（含大陸人士和其他不具中華民國國籍者），機會中獎所得稅為
+              20%，中獎者應自付中獎商品之稅金，否則視同放棄。</span></li>
+          <li class="flex gap-4"><span style="color:var(--muted)">05</span><span>本活動之贈品提供及寄送僅限定於台灣。</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========================================= REGISTRATION ========================================= -->
+    <section id="register" class="px-6 md:px-10 py-28 md:py-20 border-t rule relative overflow-hidden">
+      <div class="section-label mb-6">REGISTRATION</div>
+      <div class="flex items-end justify-between flex-wrap gap-8">
+        <div>
+          <div class="text-base tracking-[0.22em] mb-3" style="color:var(--muted)">線上註冊</div>
+          <div class="reg-price">Free<span style="color:var(--accent)">.</span></div>
+        </div>
+        <div class="max-w-md">
+          <p class="text-4xl mb-5 font-medium">免費活動，限量席次</p>
+          <p class="text-[1.6rem]/[1.5] md:text-3xl/[1.5]">
+            線上報名開放至<br />
+            <em class="italic" style="color:var(--accent)">4/23 (四)中午12:00止</em>.<br />
+            <span style="color:var(--text)">現場座位有限，敬請提早註冊！</span>
+          </p>
+          <a href="#" id="register-section-cta" class="btn-primary mt-8">
+            <span class="text-base">立即報名</span>
+            <span class="arrow text-base">⟶</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Terms -->
+      <div class="mt-20 grid grid-cols-12 gap-6 border-t rule pt-10">
+        <div class="col-span-12 md:col-span-3 section-label">注意事項</div>
+        <div class="col-span-12 md:col-span-9 text-sm leading-[1.8] space-y-2" style="color:var(--text)">
+          <div class="flex gap-4"><span style="color:var(--muted)">01
+              —</span><span>主辦單位審核報名成功後將寄送報到確認碼至註冊信箱，請留意您的信箱，研討會當天請攜帶確認碼與一張名片辦理報到。</span></div>
+          <div class="flex gap-4"><span style="color:var(--muted)">02 —</span><span>Once the payment is received, we'll
+              send an invoice code to your e-mail. Please bring the code with a business card to check in.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================= PARTNERS ========================================= -->
+    <section id="partners" class="px-6 md:px-10 py-28 md:py-20 border-t rule">
+      <div class="flex items-end justify-between flex-wrap gap-6 mb-16">
+        <div>
+          <div class="section-label mb-4">Partner</div>
+          <h2 class="display text-[4rem] md:text-[6rem]">贊助<span style="color:var(--accent); font-weight:400;">單位</span>
+          </h2>
+        </div>
+      </div>
+
+
+      <!-- Gold tier -->
+      <div class="mb-14">
+        <div class="text-sm tracking-[0.28em] uppercase mb-6" style="color:var(--accent)">金級贊助
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <div class="flex items-center justify-center">
+            <img src="asset/img/Logo-Nvidia.png" alt="NVIDIA" class="partner-logo" loading="lazy" decoding="async">
+          </div>
+          <div class="flex items-center justify-center">
+            <img src="asset/img/Logo-Asus.png" alt="ASUS" class="partner-logo" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+
+      <!-- Silver tier -->
+      <div>
+        <div class="text-sm tracking-[0.28em]  mb-6" style="color:#6b7280">銀級贊助</div>
+        <div class="flex flex-wrap gap-3">
+          <div class="flex items-center justify-center w-44 h-16">
+            <img src="asset/img/Logo-Seagate.png" alt="Seagate" class="partner-logo" loading="lazy" decoding="async">
+          </div>
+          <div class="flex items-center justify-center w-44 ">
+            <img src="asset/img/Logo-winbond.png" alt="Winbond" class="partner-logo" loading="lazy" decoding="async">
+          </div>
+          <div class="flex items-center justify-center w-44">
+            <img src="asset/img/Logo-Adata.png" alt="ADATA" class="partner-logo" loading="lazy" decoding="async">
+          </div>
+          <div class="flex items-center justify-center w-44">
+            <img src="asset/img/Logo-Cybernet.png" alt="Cybernet" class="partner-logo" loading="lazy" decoding="async">
+          </div>
+          <div class="flex items-center justify-center w-44">
+            <img src="asset/img/Logo-swagelok.png" alt="Swagelok" class="partner-logo" loading="lazy" decoding="async">
+          </div>
+          <div class="flex items-center justify-center w-44">
+            <img src="asset/img/Logo-Infinitix.png" alt="Infinitix" class="partner-logo" loading="lazy"
+              decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================= VENUE ========================================= -->
+    <section id="venue" class="px-6 md:px-10 py-28 md:py-20 border-t rule">
+      <div class="flex items-end justify-between flex-wrap gap-6 mb-16">
+        <div>
+          <div class="section-label mb-4">Venue & Access</div>
+          <h2 class="display text-[4rem] md:text-[6rem]">交通<span style="color:var(--accent); font-weight:400;">資訊</span>
+          </h2>
+        </div>
+      </div>
+
+      <!-- Address bar -->
+      <div class="flex items-start gap-4 mb-12 pb-12 border-b rule">
+        <div class="flex-shrink-0 w-1 self-stretch" style="background:var(--accent)"></div>
+        <div>
+          <div class="text-sm tracking-[0.28em] uppercase mb-2" style="color:var(--muted)">活動地點</div>
+          <div class="text-[1.8rem] md:text-[2.4rem] leading-tight mb-1">政大公企中心 A431 會議廳</div>
+          <div class="text-base tracking-[0.04em]" style="color:var(--muted)">台北市大安區金華街187號4樓</div>
+        </div>
+      </div>
+
+      <!-- Map + MRT grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+        <!-- Google Map embed -->
+        <div class="overflow-hidden" style="border:1px solid var(--border); border-radius:2px;">
+          <iframe
+            src="https://maps.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E9%87%91%E8%8F%AF%E8%A1%97187%E8%99%9F&t=&z=17&ie=UTF8&iwloc=B&output=embed"
+            width="100%" height="380" style="border:0; display:block;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="政大公企中心地圖"></iframe>
+        </div>
+
+        <!-- MRT routes -->
+        <div class="flex flex-col gap-0">
+          <div class="text-base tracking-[0.28em]  mb-3" style="color:var(--muted)">捷運路線</div>
+
+          <!-- Route 1 -->
+          <div class="py-6 border-b rule">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="mrt-pill" style="background:#E3002C;">紅線</span>
+              <span class="mrt-pill" style="background:#F8971D;">橘線</span>
+              <span class="text-sm tracking-[0.1em]" style="color:var(--muted)">淡水線 / 蘆洲線</span>
+            </div>
+            <div class="text-[1.5rem] leading-snug mb-1">東門站 3 號出口</div>
+            <div class="text-sm" style="color:var(--muted)">步行約 6–8 分鐘</div>
+          </div>
+
+          <!-- Route 2 -->
+          <div class="py-6 border-b rule">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="mrt-pill" style="background:#008659;">綠線</span>
+              <span class="mrt-pill" style="background:#F8971D;">橘線</span>
+              <span class="text-sm tracking-[0.1em]" style="color:var(--muted)">新店線 / 蘆洲線</span>
+            </div>
+            <div class="text-[1.5rem] leading-snug mb-1">古亭站 4 號出口</div>
+            <div class="text-sm" style="color:var(--muted)">至和平東路轉搭 214、606 公車至公企中心站</div>
+          </div>
+
+          <!-- Route 3 -->
+          <div class="py-6">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="mrt-pill" style="background:#008659;">綠線</span>
+              <span class="mrt-pill" style="background:#F8971D;">橘線</span>
+              <span class="text-sm tracking-[0.1em]" style="color:var(--muted)">新店線 / 蘆洲線</span>
+            </div>
+            <div class="text-[1.5rem] leading-snug mb-1">古亭站 5 號出口</div>
+            <div class="text-sm" style="color:var(--muted)">沿和平東路左轉金山南路，再至金華街口右轉，步行約 12–15 分鐘</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================= CONTACT ========================================= -->
+    <section id="contact" class="px-6 md:px-10 py-28 md:py-20 border-t rule">
+      <div class="section-label mb-6">Contact</div>
+      <h2 class="display text-[4rem] md:text-[6rem] mb-16">聯絡 <span
+          style="color:var(--accent); font-weight:400;">我們</span></h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 border-t rule">
+        <div class="py-10 border-b md:border-b-0 md:border-r rule pr-8">
+          <div class="section-label mb-4">票務聯絡人</div>
+          <div class="text-4xl leading-tight pb-3 border-b">Liz Chen</div>
+          <div class="text-lg mt-3 space-y-1">
+            <div style="color:var(--muted)">trendforce_service@trendforce.com</div>
+            <div>+886-2-8978-6488 <span style="color:var(--muted)">ext. 372</span></div>
+          </div>
+        </div>
+        <div class="py-10 md:pl-8">
+          <div class="section-label mb-4">票務聯絡人</div>
+          <div class="text-4xl pb-3 border-b leading-tight">Jade Chou</div>
+          <div class="text-lg mt-3 space-y-1">
+            <div style="color:var(--muted)">trendforce_service@trendforce.com</div>
+            <div>+886-2-8978-6488 <span style="color:var(--muted)">ext. 661</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================= FOOTER ========================================= -->
+    <footer class="border-t rule px-6 md:px-10 py-10">
+      <div class="flex items-center justify-between flex-wrap gap-6">
+        <div class="flex flex-col gap-2">
+          <span class="text-xs tracking-[0.22em]" style="color:var(--muted)">主辦單位</span>
+          <img src="asset/img/TF-logo.svg" alt="TrendForce" class="h-8" loading="lazy" decoding="async">
+        </div>
+        <div class="text-[10px] tracking-[0.22em] uppercase" style="color:var(--muted)">
+          © 2026 TrendForce Corp. · All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
